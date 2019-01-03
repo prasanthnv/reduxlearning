@@ -23,16 +23,10 @@ class SongList extends Component {
     render() {
         console.log(this.props)
         return (
-            <div className="row">
-                <div className="col-sm-6">
+     
                     <div className="list-group">
                         {this.renderList()}
                     </div>
-                </div>
-                <div className="col-sm-6">
-                    <SongDetails song={this.props.selectedSong} />
-                </div>
-            </div>
 
         );
     }
@@ -40,8 +34,7 @@ class SongList extends Component {
 
 const mapStatesToProps = state => {
     return {
-        songs: state.songs,
-        selectedSong: state.selectedSong
+        songs: state.songs
     };
 }
 
